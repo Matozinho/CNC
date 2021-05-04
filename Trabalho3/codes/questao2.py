@@ -14,9 +14,9 @@ def metHeun(k1, k2, x0, y0, endX, h):
   return yn
 
 # k1 = f(x,y)
-k1 = -Symbol('x') + Symbol('y')
+k1 = -.01 * Symbol('y')
 
 # k2 = f(x+h, y+h*f(x,y))
-k2 = -(Symbol('x') + Symbol('h')) + Symbol('y') + (Symbol('h') * (-Symbol('x') + Symbol('y')))
+k2 = -.01 * (Symbol('y') + Symbol('h') * (-.01 * Symbol('y')))
 
-print(metHeun(k1, k2, 0, 3, .4, .1))
+print(metHeun(k1, k2, 0, 10, 4, .2))
