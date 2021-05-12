@@ -18,6 +18,4 @@ def metHeun(k1, k2, x0, y0, endX, h):
 k1 = -.01 * Symbol('y')
 
 # k2 = f(x+h, y+h*f(x,y))
-k2 = -.01 * (Symbol('y') + Symbol('h') * (-.01 * Symbol('y')))
-
-print("Método de Heun: ", metHeun(k1, k2, 0, 10, 4, .2))
+print(metHeun(k1, k2, 0, 10, 4, .2))
